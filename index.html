@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duca – Inglês de Boa | Aprenda inglês do seu jeito</title>
+  <meta name="description" content="Aprenda inglês sem pressão, sem decoreba e sem complicação. Na Duca, o inglês flui naturalmente. Aulas online e presenciais para todos os níveis." />
+  <meta property="og:title" content="Duca – Inglês de Boa" />
+  <meta property="og:description" content="Inglês sem amarras. Do seu jeito, no seu ritmo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.inglesduca.com.br" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <span class="logo-icon">🌎</span>
+        <span class="logo-text">Duca <em>Inglês de Boa</em></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#metodo" class="nav-link">Método</a></li>
+        <li><a href="#planos" class="nav-link">Planos</a></li>
+        <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+        <li><a href="#contato" class="nav-cta" id="nav-cta-btn">Quero Começar 🚀</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="floating-words" aria-hidden="true">
+      <span class="fw fw-1">Hello!</span>
+      <span class="fw fw-2">Go for it</span>
+      <span class="fw fw-3">Cool</span>
+      <span class="fw fw-4">Awesome!</span>
+      <span class="fw fw-5">Let's go</span>
+      <span class="fw fw-6">Yeah!</span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">✨ Inglês do jeito que a vida pede</div>
+      <h1 class="hero-title">
+        Inglês <span class="gradient-text">sem amarras.</span><br />
+        Do <span class="underline-text">seu</span> jeito.
+      </h1>
+      <p class="hero-subtitle">
+        Chega de gramática decorada, medo de errar e aulas chatas.<br />
+        Na <strong>Duca</strong>, você aprende inglês de verdade — conversando, rindo e evoluindo.
+      </p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn-primary" id="hero-cta">
+          Agendar aula grátis
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#metodo" class="btn-ghost" id="hero-method">
+          Como funciona
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Alunos formados</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Aprovação</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">7+</span>
+          <span class="stat-label">Anos de experiência</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card card-main">
+        <div class="card-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-emoji">👩‍🎓</div>
+        </div>
+        <div class="card-info">
+          <p class="card-name">Ana Clara</p>
+          <p class="card-desc">"Passei no intercâmbio!"</p>
+        </div>
+        <div class="card-badge card-badge-green">✓ Fluente</div>
+      </div>
+      <div class="hero-card card-secondary">
+        <span class="card-icon">🎙️</span>
+        <div>
+          <p class="card-label">Conversação</p>
+          <p class="card-value">Aula ao vivo</p>
+        </div>
+      </div>
+      <div class="hero-card card-tertiary">
+        <div class="progress-label">Seu progresso</div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-pct">78% 🔥</div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Rolar para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual">
+          <div class="sobre-img-wrap">
+            <div class="sobre-img-bg"></div>
+            <div class="sobre-img-card">
+              <div class="sobre-emoji-big">🌊</div>
+              <h3>Flua no inglês</h3>
+              <p>Aprendizado natural, como aprendemos o português.</p>
+            </div>
+          </div>
+          <div class="sobre-tag sobre-tag-1">
+            <span>🏆</span> Top escola 2024
+          </div>
+          <div class="sobre-tag sobre-tag-2">
+            <span>❤️</span> Alunos satisfeitos
+          </div>
+        </div>
+        <div class="sobre-content">
+          <div class="section-badge">Sobre a Duca</div>
+          <h2 class="section-title">Inglês que encaixa<br /><span class="gradient-text">na sua vida</span></h2>
+          <p class="sobre-text">
+            A Duca nasceu da crença de que aprender inglês pode — e deve — ser uma experiência leve, divertida e transformadora. Nada de livros empoeirados ou regras que você decora e esquece.
+          </p>
+          <p class="sobre-text">
+            Aqui, você aprende conversando. O erro faz parte do processo, e nós celebramos cada conquista, por menor que seja.
+          </p>
+          <ul class="sobre-list">
+            <li>
+              <div class="list-icon">🎯</div>
+              <div>
+                <strong>Foco em comunicação real</strong>
+                <p>Inglês da vida real, não de provas.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">🔄</div>
+              <div>
+                <strong>Metodologia imersiva</strong>
+                <p>Você pensa em inglês sem perceber.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">💬</div>
+              <div>
+                <strong>Turmas pequenas ou 1-a-1</strong>
+                <p>Atenção real para o seu progresso.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#contato" class="btn-primary" id="sobre-cta">Conheça a Duca</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MÉTODO ===== -->
+  <section class="metodo" id="metodo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Como funciona</div>
+        <h2 class="section-title">O método <span class="gradient-text">Duca</span></h2>
+        <p class="section-subtitle">Três pilares que transformam a forma como você aprende inglês.</p>
+      </div>
+      <div class="metodo-grid">
+        <div class="metodo-card" id="mc-1">
+          <div class="metodo-icon">🗣️</div>
+          <h3>Conversação desde o dia 1</h3>
+          <p>Você fala inglês na sua primeira aula. Sem esperar "estar pronto" — porque você já está.</p>
+          <div class="metodo-num">01</div>
+        </div>
+        <div class="metodo-card metodo-card-featured" id="mc-2">
+          <div class="metodo-icon">🧠</div>
+          <h3>Contexto, não regras</h3>
+          <p>Em vez de decorar gramática, você entende o inglês pelo contexto. É como aprendemos a língua mãe.</p>
+          <div class="metodo-num">02</div>
+          <div class="metodo-badge">Mais popular</div>
+        </div>
+        <div class="metodo-card" id="mc-3">
+          <div class="metodo-icon">📈</div>
+          <h3>Progresso que você sente</h3>
+          <p>Acompanhamos sua evolução a cada aula. Você vai notar a diferença semana a semana.</p>
+          <div class="metodo-num">03</div>
+        </div>
+        <div class="metodo-card" id="mc-4">
+          <div class="metodo-icon">🎧</div>
+          <h3>Input autêntico</h3>
+          <p>Séries, músicas, podcasts e conversas reais fazem parte do seu material de estudo.</p>
+          <div class="metodo-num">04</div>
+        </div>
+        <div class="metodo-card" id="mc-5">
+          <div class="metodo-icon">🤝</div>
+          <h3>Suporte contínuo</h3>
+          <p>Nossa comunidade no WhatsApp está sempre ativa para tirar dúvidas e praticar fora da aula.</p>
+          <div class="metodo-num">05</div>
+        </div>
+        <div class="metodo-card" id="mc-6">
+          <div class="metodo-icon">⚡</div>
+          <h3>Flexibilidade total</h3>
+          <p>Horários que se adaptam à sua rotina. Online ou presencial — você escolhe.</p>
+          <div class="metodo-num">06</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANOS ===== -->
+  <section class="planos" id="planos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Planos</div>
+        <h2 class="section-title">Escolha o seu <span class="gradient-text">ritmo</span></h2>
+        <p class="section-subtitle">Sem contratos longos, sem letras miúdas. Só inglês e resultado.</p>
+      </div>
+      <div class="planos-grid">
+
+        <div class="plano-card" id="plano-basico">
+          <div class="plano-header">
+            <span class="plano-icon">🌱</span>
+            <h3>Básico</h3>
+            <p>Para quem está começando</p>
+          </div>
+          <div class="plano-preco">
+            <span class="preco-moeda">R$</span>
+            <span class="preco-valor">249</span>
+            <span class="preco-periodo">/mês</span>
+          </div>
+          <ul class="plano-features">
+            <li><span class="feat-ok">✓</span> 2 aulas por semana</li>
+            <li><span class="feat-ok">✓</span> Acesso à comunidade</li>
+            <li><span class="feat-ok">✓</span> Material digital incluso</li>
+            <li><span class="feat-ok">✓</span> Suporte por WhatsApp</li>
+            <li><span class="feat-no">✗</span> Aulas 1-a-1</li>
+            <li><span class="feat-no">✗</span> Mentoria de carreira</li>
+          </ul>
+          <a href="#contato" class="btn-outline" id="plano-basico-cta">Começar agora</a>
+        </div>
+
+        <div class="plano-card plano-destaque" id="plano-fluente">
+          <div class="plano-tag">⭐ Mais escolhido</div>
+          <div class="plano-header">
+            <span class="plano-icon">🚀</span>
+            <h3>Fluente</h3>
+            <p>Para evoluir de verdade</p>
+          </div>
+          <div class="plano-preco">
+            <span class="preco-moeda">R$</span>
+            <span class="preco-valor">399</span>
+            <span class="preco-periodo">/mês</span>
+          </div>
+          <ul class="plano-features">
+            <li><span class="feat-ok">✓</span> 4 aulas por semana</li>
+            <li><span class="feat-ok">✓</span> Acesso à comunidade</li>
+            <li><span class="feat-ok">✓</span> Material digital incluso</li>
+            <li><span class="feat-ok">✓</span> Suporte por WhatsApp</li>
+            <li><span class="feat-ok">✓</span> 1 aula 1-a-1 por mês</li>
+            <li><span class="feat-no">✗</span> Mentoria de carreira</li>
+          </ul>
+          <a href="#contato" class="btn-primary" id="plano-fluente-cta">Quero esse!</a>
+        </div>
+
+        <div class="plano-card" id="plano-pro">
+          <div class="plano-header">
+            <span class="plano-icon">💎</span>
+            <h3>Pro</h3>
+            <p>Para a imersão total</p>
+          </div>
+          <div class="plano-preco">
+            <span class="preco-moeda">R$</span>
+            <span class="preco-valor">599</span>
+            <span class="preco-periodo">/mês</span>
+          </div>
+          <ul class="plano-features">
+            <li><span class="feat-ok">✓</span> Aulas ilimitadas</li>
+            <li><span class="feat-ok">✓</span> Acesso à comunidade</li>
+            <li><span class="feat-ok">✓</span> Material digital incluso</li>
+            <li><span class="feat-ok">✓</span> Suporte por WhatsApp</li>
+            <li><span class="feat-ok">✓</span> Aulas 1-a-1 ilimitadas</li>
+            <li><span class="feat-ok">✓</span> Mentoria de carreira</li>
+          </ul>
+          <a href="#contato" class="btn-outline" id="plano-pro-cta">Começar agora</a>
+        </div>
+
+      </div>
+      <p class="planos-note">💬 Não sabe qual escolher? <a href="#contato">Fala com a gente</a> — a gente te ajuda!</p>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Depoimentos</div>
+        <h2 class="section-title">Quem já <span class="gradient-text">voou</span></h2>
+        <p class="section-subtitle">Histórias reais de alunos que mudaram sua relação com o inglês.</p>
+      </div>
+      <div class="dep-grid">
+        <div class="dep-card" id="dep-1">
+          <div class="dep-stars">⭐⭐⭐⭐⭐</div>
+          <p class="dep-text">"Tentei aprender inglês várias vezes e sempre desisti. Na Duca foi diferente — em 3 meses eu já estava conseguindo ter conversas reais. Nunca pensei que seria possível!"</p>
+          <div class="dep-author">
+            <div class="dep-avatar">MF</div>
+            <div>
+              <p class="dep-name">Mariana Ferreira</p>
+              <p class="dep-role">Designer, 28 anos</p>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card dep-card-featured" id="dep-2">
+          <div class="dep-stars">⭐⭐⭐⭐⭐</div>
+          <p class="dep-text">"A metodologia da Duca é incrível. Aprendi mais em 2 meses aqui do que em 2 anos numa escola tradicional. O ambiente é super descontraído e o professor faz toda a diferença!"</p>
+          <div class="dep-author">
+            <div class="dep-avatar">RL</div>
+            <div>
+              <p class="dep-name">Rafael Lima</p>
+              <p class="dep-role">Engenheiro, 32 anos</p>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card" id="dep-3">
+          <div class="dep-stars">⭐⭐⭐⭐⭐</div>
+          <p class="dep-text">"Precisava do inglês para um processo seletivo numa multinacional. A Duca me preparou em tempo recorde e passei! Super recomendo para quem precisa de resultado rápido."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">CS</div>
+            <div>
+              <p class="dep-name">Camila Santos</p>
+              <p class="dep-role">Administradora, 25 anos</p>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card" id="dep-4">
+          <div class="dep-stars">⭐⭐⭐⭐⭐</div>
+          <p class="dep-text">"Nunca imaginei que conseguiria assistir série sem legenda. Com a Duca ficou mais fácil do que eu pensava. As aulas são sempre animadas e você aprende sem perceber!"</p>
+          <div class="dep-author">
+            <div class="dep-avatar">JP</div>
+            <div>
+              <p class="dep-name">João Pedro</p>
+              <p class="dep-role">Estudante, 19 anos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Dúvidas <span class="gradient-text">frequentes</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false">
+            Preciso ter algum conhecimento prévio?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Não! Temos turmas para todos os níveis, do absoluto zero ao avançado. Na sua primeira aula, fazemos uma avaliação gratuita para entender onde você está e traçar o melhor caminho.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false">
+            As aulas são online ou presenciais?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oferecemos os dois formatos! Você pode fazer aulas online pelo Zoom ou presencial (consulte disponibilidade de local). Muitos alunos combinam os dois de acordo com sua semana.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false">
+            Em quanto tempo vou aprender inglês?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Depende do seu nível inicial e da frequência das aulas, mas a maioria dos alunos já consegue se comunicar com confiança em 3 a 6 meses. O segredo é a consistência!</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false">
+            Posso trocar de plano depois de assinar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Nossos planos são flexíveis. Você pode fazer upgrade ou downgrade a qualquer momento, sem burocracia. Queremos que o plano funcione para você.</p>
+          </div>
+        </div>
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false">
+            Tem aula experimental gratuita?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Oferecemos uma aula experimental 100% gratuita para você conhecer a metodologia Duca sem nenhum compromisso. É só entrar em contato e agendar!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO / CTA FINAL ===== -->
+  <section class="contato" id="contato">
+    <div class="contato-bg-blobs">
+      <div class="blob blob-c1"></div>
+      <div class="blob blob-c2"></div>
+    </div>
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-content">
+          <div class="section-badge section-badge-white">Vamos começar?</div>
+          <h2 class="section-title contato-title">Sua primeira aula<br /><span class="gradient-text-light">é de graça 🎉</span></h2>
+          <p class="contato-subtitle">Sem compromisso. Sem cartão de crédito. Só inglês de boa.</p>
+          <div class="contato-info">
+            <a href="https://wa.me/5500000000000" class="contato-link" id="whatsapp-link" target="_blank" rel="noopener">
+              <div class="contato-link-icon">📱</div>
+              <div>
+                <p class="contato-link-label">WhatsApp</p>
+                <p class="contato-link-value">Chama no zap!</p>
+              </div>
+            </a>
+            <a href="mailto:contato@inglesduca.com.br" class="contato-link" id="email-link">
+              <div class="contato-link-icon">✉️</div>
+              <div>
+                <p class="contato-link-label">E-mail</p>
+                <p class="contato-link-value">contato@inglesduca.com.br</p>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/inglesduca" class="contato-link" id="instagram-link" target="_blank" rel="noopener">
+              <div class="contato-link-icon">📸</div>
+              <div>
+                <p class="contato-link-label">Instagram</p>
+                <p class="contato-link-value">@inglesduca</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contato-form-wrap">
+          <form class="contato-form" id="contato-form" novalidate>
+            <h3>Agende sua aula gratuita</h3>
+            <div class="form-group">
+              <label for="nome">Seu nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Como posso te chamar?" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="nivel">Seu nível de inglês</label>
+              <select id="nivel" name="nivel">
+                <option value="">Selecione...</option>
+                <option value="zero">Nunca estudei</option>
+                <option value="basico">Básico</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="form-submit">
+              Quero minha aula gratuita! 🚀
+            </button>
+            <p class="form-note">Respondemos em até 2 horas úteis 🕐</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-icon">🌎</span>
+            <span class="logo-text">Duca <em>Inglês de Boa</em></span>
+          </a>
+          <p class="footer-tagline">Inglês sem amarras. Para a vida real.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/inglesduca" id="footer-instagram" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn">📸</a>
+            <a href="https://wa.me/5500000000000" id="footer-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn">📱</a>
+            <a href="mailto:contato@inglesduca.com.br" id="footer-email" aria-label="E-mail" class="social-btn">✉️</a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre a Duca</a></li>
+            <li><a href="#metodo">Nosso Método</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Planos</h4>
+          <ul>
+            <li><a href="#planos">Básico</a></li>
+            <li><a href="#planos">Fluente</a></li>
+            <li><a href="#planos">Pro</a></li>
+            <li><a href="#contato">Aula gratuita</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Receba dicas de inglês</h4>
+          <p>Toda semana no seu e-mail, de graça.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="seu@email.com" />
+            <button type="submit" id="newsletter-btn">Assinar</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Duca – Inglês de Boa. Todos os direitos reservados.</p>
+        <p><a href="https://www.inglesduca.com.br">www.inglesduca.com.br</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
