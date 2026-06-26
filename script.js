@@ -60,7 +60,7 @@ if (progressFill) progressObserver.observe(progressFill);
 
 /* ===== SCROLL REVEAL (Intersection Observer) ===== */
 const revealElements = document.querySelectorAll(
-  '.metodo-card, .dep-card, .plano-card, .sobre-list li, .faq-item, .contato-link'
+  '.metodo-card, .dep-card, .plano-card, .sobre-list li, .faq-item, .contato-link-min'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {

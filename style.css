@@ -50,13 +50,13 @@
 
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body {
   font-family: var(--font-body);
   color: var(--text-primary);
   background: var(--bg);
   line-height: 1.6;
-  overflow-x: hidden;
+  /* NÃO usar overflow-x:hidden no body — quebra position:fixed no iOS Safari */
 }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -284,14 +284,16 @@ button { cursor: pointer; font-family: inherit; }
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 999;
-  height: var(--nav-h);
-  transition: background var(--transition), box-shadow var(--transition);
+  z-index: 9999;
+  /* Cresce para acomodar a barra de status do celular (notch, Dynamic Island) */
+  height: calc(var(--nav-h) + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--transition);
 }
 .navbar.scrolled {
-  background: rgba(250,249,247,.94);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 var(--border);
+  box-shadow: 0 2px 16px rgba(0,0,0,.07);
 }
 .nav-container {
   max-width: 1160px;
@@ -396,7 +398,8 @@ button { cursor: pointer; font-family: inherit; }
   position: relative;
   min-height: 100vh;
   background: var(--bg);
-  padding: calc(var(--nav-h) + 60px) 0 80px;
+  /* padding-top leva em conta a navbar + safe area do celular */
+  padding: calc(var(--nav-h) + env(safe-area-inset-top) + 60px) 0 80px;
   overflow: hidden;
 }
 
@@ -664,6 +667,7 @@ button { cursor: pointer; font-family: inherit; }
   background: var(--gray-light);
   border-radius: var(--radius-xl);
   border: 1.5px solid var(--border);
+  position: relative;
 }
 .sobre-img-card {
   position: absolute;
@@ -1320,95 +1324,207 @@ button { cursor: pointer; font-family: inherit; }
   .ipa-deco { font-size: clamp(3rem, 8vw, 6rem); }
 }
 
+
 @media (max-width: 768px) {
-  /* Navbar */
+  /* ----- Navbar (handled in base CSS now) ----- */
   .nav-links {
     position: fixed;
     top: var(--nav-h);
     left: 0; right: 0;
-    background: rgba(250,249,247,.97);
+    background: rgba(250,249,247,.98);
     backdrop-filter: blur(16px);
     flex-direction: column;
-    padding: 24px;
-    gap: 16px;
-    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    padding: 20px 24px 28px;
+    gap: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.1);
     border-bottom: 1px solid var(--border);
     transform: translateY(-110%);
     transition: transform var(--transition);
     z-index: 998;
   }
   .nav-links.open { transform: translateY(0); }
+  .nav-link {
+    font-size: 1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    color: var(--text-secondary);
+  }
+  .nav-link:last-of-type { border-bottom: none; }
+  .nav-cta {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 22px;
+    font-size: .9rem;
+  }
   .hamburger { display: flex; }
 
-  /* Seções */
-  .sobre, .metodo, .planos, .depoimentos, .faq, .contato { padding: 72px 0; }
+  /* ----- Global section padding ----- */
+  .sobre, .metodo, .planos, .depoimentos, .faq, .contato { padding: 64px 0; }
   .section-header { margin-bottom: 40px; }
-  .section-title { font-size: 1.9rem; }
+  .section-title { font-size: clamp(1.7rem, 6vw, 2.1rem); }
+  .section-subtitle { font-size: .95rem; }
 
-  /* Hero */
-  .hero { padding-top: calc(var(--nav-h) + 32px); padding-bottom: 56px; }
-  .hero-title { font-size: 2.3rem; letter-spacing: -.025em; }
-  .hero-subtitle { font-size: .95rem; }
-  .hero-actions { flex-direction: column; width: 100%; gap: 10px; }
-  .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+  /* ----- Hero ----- */
+  .hero {
+    min-height: auto;
+    padding: calc(var(--nav-h) + 32px) 0 56px;
+  }
+  .hero-inner { gap: 32px; }
+  .hero-badge { font-size: .9rem; }
+  .hero-title { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .hero-subtitle { font-size: .95rem; margin-bottom: 28px; }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; padding: 13px 24px; }
 
-  /* Hero cards — empilha */
+  /* Hero cards — coluna única, contidos */
   .hero-visual { flex-direction: column; align-items: stretch; gap: 10px; }
   .hero-card { flex: none; min-width: unset; max-width: 100%; padding: 14px 18px; }
 
   /* Stats — linha horizontal compacta */
-  .hero-stats { flex-direction: row; }
+  .hero-stats { display: flex; flex-direction: row; }
   .stat { flex: 1; padding: 12px 8px; border-right: 1.5px solid var(--border); border-bottom: none; }
   .stat:last-child { border-right: none; }
   .stat-num { font-size: 1.2rem; }
-  .stat-label { font-size: .62rem; }
+  .stat-label { font-size: .6rem; white-space: normal; text-align: center; }
 
-  /* Sobre */
-  .sobre-img-bg { height: 240px; }
+  /* ----- Sobre ----- */
+  .sobre-grid { gap: 32px; }
+  /* Card "Flua no inglês" — layout móvel: card simples em bloco */
+  .sobre-img-wrap { display: flex; flex-direction: column; gap: 0; }
+  .sobre-img-bg { display: none; } /* esconde o fundo cinza vazio */
+  .sobre-img-card {
+    position: static;         /* remove o absolute que quebrava */
+    inset: auto;
+    padding: 28px 24px;
+    border-radius: var(--radius-lg);
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    backdrop-filter: none;
+    box-shadow: var(--shadow-sm);
+    height: auto;
+  }
+  .sobre-emoji-big { margin-bottom: 12px; }
   .sobre-tag { display: none; }
+  .sobre-list li { padding: 12px; }
+  .sobre-list strong { font-size: .85rem; }
 
-  /* Método */
-  .metodo-grid { grid-template-columns: 1fr; }
+  /* ----- Método ----- */
+  .metodo-grid { grid-template-columns: 1fr; gap: 12px; }
   .metodo-card { padding: 24px 20px; }
+  .metodo-icon svg { width: 22px; height: 22px; }
 
-  /* Modalidades */
-  .planos-grid-2 { grid-template-columns: 1fr; max-width: 100%; }
+  /* ----- Modalidades ----- */
+  .planos-grid-2 { grid-template-columns: 1fr; max-width: 100%; gap: 32px; }
   .plano-card { padding: 32px 24px; }
 
-  /* Depoimentos */
+  /* ----- Depoimentos ----- */
+  .dep-grid { grid-template-columns: 1fr; }
   .dep-card { padding: 24px 20px; }
 
-  /* FAQ */
-  .faq-question { font-size: .9rem; padding: 16px 18px; }
-  .faq-answer p { padding: 0 18px 16px; }
+  /* ----- FAQ ----- */
+  .faq-list { max-width: 100%; }
+  .faq-question { font-size: .88rem; padding: 16px 18px; }
+  .faq-answer p { font-size: .9rem; padding: 0 18px 16px; }
 
-  /* Contato */
-  .contato-form-wrap { padding: 28px 20px; }
-  .contato-title { font-size: 2rem !important; }
+  /* ----- Contato ----- */
+  .contato-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contato-form-wrap { padding: 28px 20px; border-radius: var(--radius-lg); }
+  .contato-title { font-size: 1.9rem !important; }
+  .contato-subtitle { font-size: .92rem; }
 
-  /* Footer */
+  /* ----- Footer ----- */
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-  .newsletter-form { flex-direction: column; }
-  .newsletter-form input, .newsletter-form button { width: 100%; }
+  .newsletter-form { flex-direction: column; gap: 10px; }
+  .newsletter-form input { width: 100%; border-radius: var(--radius-md); }
+  .newsletter-form button { width: 100%; border-radius: var(--radius-md); }
 
-  /* IPA watermarks — ocultas no mobile */
+  /* ----- IPA — hidden on mobile to prevent overflow ----- */
   .ipa-deco { display: none; }
+
+  /* ----- Word card hero ----- */
+  .word-en { font-size: 1.25rem; }
 }
 
 @media (max-width: 480px) {
+  :root { --nav-h: 64px; }
   .container { padding: 0 16px; }
-  .hero-title { font-size: 2rem; }
-  .hero-subtitle { font-size: .9rem; }
-  .section-title { font-size: 1.65rem; }
-  .sobre, .metodo, .planos, .depoimentos, .faq, .contato { padding: 56px 0; }
-  .metodo-card { padding: 20px 16px; }
-  .plano-card { padding: 28px 18px; }
-  .dep-card { padding: 20px 16px; }
-  .faq-question { padding: 14px 16px; font-size: .85rem; }
-  .contato-form-wrap { padding: 24px 16px; border-radius: var(--radius-lg); }
-  /* Stats em coluna em telas muito pequenas */
+
+  /* Hero */
+  .hero { padding: calc(var(--nav-h) + 24px) 0 48px; }
+  .hero-title { font-size: clamp(1.75rem, 8.5vw, 2.2rem); letter-spacing: -.025em; }
+  .hero-subtitle { font-size: .88rem; }
+  .hero-badge { font-size: .82rem; padding: 5px 13px; }
+  .hero-card { padding: 12px 14px; }
+  .hero-card.card-word .word-en { font-size: 1.1rem; }
+  .hero-card.card-word .word-ipa { font-size: .78rem; }
+
+  /* Stats — coluna em telas muito pequenas */
   .hero-stats { flex-direction: column; }
-  .stat { border-right: none; border-bottom: 1.5px solid var(--border); padding: 10px 14px; }
+  .stat {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-right: none;
+    border-bottom: 1.5px solid var(--border);
+    gap: 8px;
+  }
   .stat:last-child { border-bottom: none; }
+  .stat-num { font-size: 1.1rem; }
+  .stat-label { font-size: .7rem; text-align: right; }
+  /* Sections */
+  .sobre, .metodo, .planos, .depoimentos, .faq, .contato { padding: 52px 0; }
+  .section-title { font-size: clamp(1.55rem, 7vw, 1.9rem); }
+  .section-header { margin-bottom: 32px; }
+
+  /* Sobre */
+  .sobre-img-bg { height: 220px; }
+  .sobre-img-card { inset: 16px; padding: 16px; }
+  .sobre-emoji-big svg { width: 36px; height: 36px; }
+  .sobre-img-card h3 { font-size: 1.1rem; }
+  .sobre-list { gap: 10px; }
+  .sobre-list li { padding: 10px 12px; gap: 10px; }
+  .list-icon { width: 32px; height: 32px; }
+
+  /* Método */
+  .metodo-card { padding: 18px 16px; }
+  .metodo-card h3 { font-size: .95rem; }
+  .metodo-card p { font-size: .83rem; }
+
+  /* Planos */
+  .plano-card { padding: 28px 18px; }
+  .plano-header h3 { font-size: 1.1rem; }
+
+  /* Depoimentos */
+  .dep-card { padding: 20px 16px; }
+  .dep-text { font-size: .88rem; }
+
+  /* FAQ */
+  .faq-question { font-size: .82rem; padding: 14px 16px; }
+  .faq-answer p { font-size: .85rem; padding: 0 16px 14px; }
+  .faq-icon { font-size: 1.1rem; }
+
+  /* Contato */
+  .contato-form-wrap { padding: 22px 16px; }
+  .contato-title { font-size: 1.65rem !important; }
+  .contato-link-min { gap: 12px; padding: 15px 0; }
+  .link-value { font-size: .88rem; }
+
+  /* Botões */
+  .btn-primary, .btn-ghost, .btn-outline {
+    font-size: .88rem;
+    padding: 12px 20px;
+  }
+
+  /* Footer */
+  .footer-brand .nav-logo .logo-duca { font-size: 1.4rem; }
+  .footer-links-col h4 { font-size: .85rem; }
 }
