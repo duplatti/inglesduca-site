@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duca – Inglês de Boa | Aprenda inglês do seu jeito</title>
+  <meta name="description" content="Aprenda inglês do seu jeito, sem decoreba e sem julgamento. Na Duca, você aprende conversando de verdade — 100% online, com horários flexíveis." />
+  <meta property="og:title" content="Duca – Inglês de Boa" />
+  <meta property="og:description" content="Inglês sem enrolação. Do seu jeito, no seu ritmo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.inglesduca.com.br" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Plus Jakarta Sans ≈ Neue Einstellung | Caveat ≈ Bryndan Write -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo">
+        <span class="logo-duca">duca</span>
+        <span class="logo-tagline">inglês de boa</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#metodo" class="nav-link">Método</a></li>
+        <li><a href="#planos" class="nav-link">Modalidades</a></li>
+        <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+        <li><a href="#contato" class="nav-cta" id="nav-cta-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Quero começar
+        </a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <span class="ipa-deco ipa-deco-hero" aria-hidden="true">/ɪŋˈɡlɪʃ/</span>
+    <div class="floating-words" aria-hidden="true">
+      <span class="fw fw-1">Hello!</span>
+      <span class="fw fw-2">Go for it</span>
+      <span class="fw fw-3">Speak up</span>
+      <span class="fw fw-4">Keep going</span>
+      <span class="fw fw-5">Let's go</span>
+      <span class="fw fw-6">You've got this</span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Inglês do jeito que a vida pede</div>
+        <h1 class="hero-title">
+          Inglês sem enrolação.
+          <span class="hand-accent">do seu jeito.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Gastou dinheiro em curso e não aprendeu? Acha que inglês é difícil demais pra você?
+          A <strong>Duca</strong> é diferente — aqui você aprende conversando de verdade, sem decoreba, sem julgamento.
+        </p>
+        <div class="hero-actions">
+          <a href="#contato" class="btn-primary" id="hero-cta">
+            Let's talk — quero uma conversa
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#metodo" class="btn-ghost" id="hero-method">
+            Como funciona
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">80+</span>
+            <span class="stat-label">Alunos atendidos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Anos de experiência</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Online</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card card-main">
+          <div class="card-avatar">
+            <div class="avatar-ring"></div>
+            <img class="avatar-photo" src="foto-teacher.jpg" alt="Teacher Du — Carlos Eduardo" />
+          </div>
+          <div class="card-info">
+            <p class="card-name">Teacher Du</p>
+            <p class="card-desc">Carlos Eduardo — Fundador & Professor</p>
+          </div>
+          <div class="card-badge card-badge-green">• Online</div>
+        </div>
+        <div class="hero-card card-secondary">
+          <span class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </span>
+          <div>
+            <p class="card-label">Formato</p>
+            <p class="card-value">100% online, no seu horário</p>
+          </div>
+        </div>
+        <div class="hero-card card-word">
+          <span class="word-label">word of the day</span>
+          <span class="word-en">fluency</span>
+          <span class="word-ipa">/ˈfluː.ən.si/</span>
+          <span class="word-pt">substantivo · habilidade de falar com naturalidade e segurança</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Rolar para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="sobre" id="sobre" style="position:relative;overflow:hidden;">
+    <span class="ipa-deco ipa-deco-sobre" aria-hidden="true">/ˈlɜːn.ɪŋ/</span>
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual">
+          <div class="sobre-img-wrap">
+            <div class="sobre-img-bg"></div>
+            <div class="sobre-img-card">
+              <div class="sobre-emoji-big">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h8M8 14h5"/></svg>
+              </div>
+              <h3>Flua no inglês</h3>
+              <p>Aprendizado natural, como aprendemos o português.</p>
+            </div>
+          </div>
+          <div class="sobre-tag sobre-tag-1">
+            Professor único
+          </div>
+          <div class="sobre-tag sobre-tag-2">
+            Atendimento personalizado
+          </div>
+        </div>
+        <div class="sobre-content">
+          <div class="section-badge">Sobre a Duca</div>
+          <h2 class="section-title">Inglês que encaixa<br /><span class="hand-text">na sua vida</span></h2>
+          <p class="sobre-text">
+            A Duca nasceu de uma missão simples: provar que qualquer pessoa consegue aprender inglês — desde que aprenda do jeito certo.
+          </p>
+          <p class="sobre-text">
+            Fundada pelo teacher Carlos Eduardo, a Duca é uma escola de um professor só — e isso é intencional. Aqui você não cai numa fila de instrutores diferentes. Você tem um único professor, que conhece sua história, seu ritmo e sabe exatamente o que te trava.
+          </p>
+          <ul class="sobre-list">
+            <li>
+              <div class="list-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <div>
+                <strong>Um professor, 100% focado em você</strong>
+                <p>Você sempre fala com o Teacher Du — que já conhece sua história e seu ritmo.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <div>
+                <strong>100% online, na sua agenda</strong>
+                <p>Sem deslocamento, sem horário fixo engessado.</p>
+              </div>
+            </li>
+            <li>
+              <div class="list-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div>
+                <strong>Ambiente sem julgamento</strong>
+                <p>Errar faz parte — e aqui isso é celebrado.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#contato" class="btn-primary" id="sobre-cta">Conheça a Duca</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MÉTODO ===== -->
+  <section class="metodo" id="metodo" style="position:relative;overflow:hidden;">
+    <span class="ipa-deco ipa-deco-metodo" aria-hidden="true">/ˈmeth.əd/</span>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">How it works</div>
+        <h2 class="section-title">O método <span class="hand-text">Duca</span></h2>
+        <p class="section-subtitle">Seis princípios que transformam a forma como você aprende inglês.</p>
+      </div>
+      <div class="metodo-grid">
+        <div class="metodo-card" id="mc-1">
+          <div class="metodo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <div class="metodo-ipa">/spiːk ʌp/</div>
+          </div>
+          <h3>Conversação desde o dia 1</h3>
+          <p>Você fala inglês na sua primeira aula. Sem esperar "estar pronto" — porque você já está.</p>
+          <div class="metodo-num">01</div>
+        </div>
+        <div class="metodo-card metodo-card-featured" id="mc-2">
+          <div class="metodo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><path d="M12 17h.01"/></svg>
+            <div class="metodo-ipa">/ˈkɒn.tekst/</div>
+          </div>
+          <h3>Contexto, não regras</h3>
+          <p>Em vez de decorar gramática, você entende o inglês pelo contexto. É como aprendemos a língua mãe.</p>
+          <div class="metodo-num">02</div>
+        </div>
+        <div class="metodo-card" id="mc-3">
+          <div class="metodo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div class="metodo-ipa">/ˈprəʊ.ɡres/</div>
+          </div>
+          <h3>Progresso que você sente</h3>
+          <p>Acompanhamos sua evolução a cada aula. Você vai notar a diferença semana a semana.</p>
+          <div class="metodo-num">03</div>
+        </div>
+        <div class="metodo-card" id="mc-4">
+          <div class="metodo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            <div class="metodo-ipa">/ˈɪn.pʊt/</div>
+          </div>
+          <h3>Input autêntico</h3>
+          <p>Séries, músicas, podcasts e conversas reais fazem parte do seu material de estudo.</p>
+          <div class="metodo-num">04</div>
+        </div>
+        <div class="metodo-card" id="mc-5">
+          <div class="metodo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="metodo-ipa">/səˈpɔːt/</div>
+          </div>
+          <h3>Suporte contínuo</h3>
+          <p>Estou disponível entre aulas para tirar dúvidas, mandar áudios e praticar junto com você.</p>
+          <div class="metodo-num">05</div>
+        </div>
+        <div class="metodo-card" id="mc-6">
+          <div class="metodo-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="metodo-ipa">/ˈflek.sɪ.bəl/</div>
+          </div>
+          <h3>Flexibilidade total</h3>
+          <p>Horários que se adaptam à sua rotina. 100% online — você estuda de onde estiver.</p>
+          <div class="metodo-num">06</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODALIDADES ===== -->
+  <section class="planos" id="planos">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Como estudar</div>
+        <h2 class="section-title">Escolha a sua <span class="gradient-text">modalidade</span></h2>
+        <p class="section-subtitle">Aulas individuais ou em grupo — você decide como aprende melhor.</p>
+      </div>
+      <div class="planos-grid planos-grid-2">
+
+        <div class="plano-card" id="plano-individual">
+          <div class="plano-header">
+            <span class="plano-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </span>
+            <h3>Aula Individual</h3>
+            <p>Só você e o teacher</p>
+          </div>
+          <ul class="plano-features">
+            <li><span class="feat-ok">✓</span> Foco 100% no seu ritmo</li>
+            <li><span class="feat-ok">✓</span> Horário totalmente flexível</li>
+            <li><span class="feat-ok">✓</span> Evolução mais acelerada</li>
+            <li><span class="feat-ok">✓</span> Material digital incluso</li>
+            <li><span class="feat-ok">✓</span> Suporte por WhatsApp</li>
+            <li><span class="feat-ok">✓</span> Foco em inglês para carreira</li>
+          </ul>
+          <a href="#contato" class="btn-outline" id="plano-individual-cta">Quero saber mais</a>
+        </div>
+
+        <div class="plano-card plano-destaque" id="plano-grupo">
+          <div class="plano-tag">Mais escolhido</div>
+          <div class="plano-header">
+            <span class="plano-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <h3>Aula em Grupo</h3>
+            <p>Turmas reduzidas e dinâmicas</p>
+          </div>
+          <ul class="plano-features">
+            <li><span class="feat-ok">✓</span> Conversação entre alunos</li>
+            <li><span class="feat-ok">✓</span> Ambiente descontraído</li>
+            <li><span class="feat-ok">✓</span> Turmas reduzidas</li>
+            <li><span class="feat-ok">✓</span> Material digital incluso</li>
+            <li><span class="feat-ok">✓</span> Suporte por WhatsApp</li>
+            <li><span class="feat-ok">✓</span> Preço mais acessível</li>
+          </ul>
+          <a href="#contato" class="btn-primary" id="plano-grupo-cta">Quero saber mais</a>
+        </div>
+
+      </div>
+      <p class="planos-note">Não sabe qual escolher? <a href="#contato">Fala com a gente</a> — a gente te ajuda!</p>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="depoimentos" id="depoimentos" style="position:relative;overflow:hidden;">
+    <span class="ipa-deco ipa-deco-dep" aria-hidden="true">/ˈsʌk.ses/</span>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Real talk</div>
+        <h2 class="section-title">Quem já está <span class="hand-text">"de boa"</span></h2>
+        <p class="section-subtitle">Histórias reais de alunos que mudaram sua relação com o inglês.</p>
+      </div>
+      <div class="dep-grid">
+        <div class="dep-card" id="dep-1">
+          <div class="dep-stars">
+            <svg width="72" height="14" viewBox="0 0 90 14" fill="currentColor"><path d="M7 0l1.8 5.4H15l-4.9 3.6 1.9 5.4L7 11l-5 3.4 1.9-5.4L0 5.4h6.2zm18 0l1.8 5.4H33l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L17 5.4h6.2zm18 0l1.8 5.4H51l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L35 5.4h6.2zm18 0l1.8 5.4H69l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L53 5.4h6.2zm18 0l1.8 5.4H87l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L71 5.4h6.2z"/></svg>
+          </div>
+          <p class="dep-text">"Tentei aprender inglês com três professores diferentes antes. Nenhum chegou nem perto do Teacher Du. Ele entendeu exatamente o meu bloqueio e em poucos meses eu já estava me comunicando sem travar."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">MF</div>
+            <div>
+              <p class="dep-name">Mariana Ferreira</p>
+              <p class="dep-role">Designer, 28 anos</p>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card dep-card-featured" id="dep-2">
+          <div class="dep-stars">
+            <svg width="72" height="14" viewBox="0 0 90 14" fill="rgba(255,255,255,0.9)"><path d="M7 0l1.8 5.4H15l-4.9 3.6 1.9 5.4L7 11l-5 3.4 1.9-5.4L0 5.4h6.2zm18 0l1.8 5.4H33l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L17 5.4h6.2zm18 0l1.8 5.4H51l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L35 5.4h6.2zm18 0l1.8 5.4H69l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L53 5.4h6.2zm18 0l1.8 5.4H87l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L71 5.4h6.2z"/></svg>
+          </div>
+          <p class="dep-text">"O Teacher Carlos tem uma didática completamente diferente de tudo que eu já vi. Ele não te deixa na dúvida — e o melhor: as aulas são leves, dá gosto de ir. Aprendi mais em 2 meses aqui do que em anos de escola tradicional."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">RL</div>
+            <div>
+              <p class="dep-name">Rafael Lima</p>
+              <p class="dep-role">Engenheiro, 32 anos</p>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card" id="dep-3">
+          <div class="dep-stars">
+            <svg width="72" height="14" viewBox="0 0 90 14" fill="currentColor"><path d="M7 0l1.8 5.4H15l-4.9 3.6 1.9 5.4L7 11l-5 3.4 1.9-5.4L0 5.4h6.2zm18 0l1.8 5.4H33l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L17 5.4h6.2zm18 0l1.8 5.4H51l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L35 5.4h6.2zm18 0l1.8 5.4H69l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L53 5.4h6.2zm18 0l1.8 5.4H87l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L71 5.4h6.2z"/></svg>
+          </div>
+          <p class="dep-text">"O Teacher Du me fez acreditar que eu conseguia. Tinha muita vergonha de falar e ele foi desconstruindo isso com paciência. Hoje falo com segurança em reuniões de trabalho em inglês. Não acredito que isso é real."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">CS</div>
+            <div>
+              <p class="dep-name">Camila Santos</p>
+              <p class="dep-role">Administradora, 25 anos</p>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card" id="dep-4">
+          <div class="dep-stars">
+            <svg width="72" height="14" viewBox="0 0 90 14" fill="currentColor"><path d="M7 0l1.8 5.4H15l-4.9 3.6 1.9 5.4L7 11l-5 3.4 1.9-5.4L0 5.4h6.2zm18 0l1.8 5.4H33l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L17 5.4h6.2zm18 0l1.8 5.4H51l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L35 5.4h6.2zm18 0l1.8 5.4H69l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L53 5.4h6.2zm18 0l1.8 5.4H87l-4.9 3.6 1.9 5.4-5-3.4-5 3.4 1.9-5.4L71 5.4h6.2z"/></svg>
+          </div>
+          <p class="dep-text">"O que mais me surpreendeu no Teacher Carlos é que ele te conhece. Sabe onde você trava, sabe como te motivar. É completamente diferente de fazer aula numa escola grande onde você é só mais um."</p>
+          <div class="dep-author">
+            <div class="dep-avatar">JP</div>
+            <div>
+              <p class="dep-name">João Pedro</p>
+              <p class="dep-role">Estudante, 19 anos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq" style="position:relative;overflow:hidden;">
+    <span class="ipa-deco ipa-deco-faq" aria-hidden="true">/ˈɑːns.ərz/</span>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Dúvidas <span class="hand-text">frequentes</span></h2>
+        <p class="section-subtitle">Se a sua ainda não está aqui, é só me chamar.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="false">
+            Preciso ter algum conhecimento prévio de inglês?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Não precisa. Atendo desde quem nunca viu uma palavra em inglês até quem já tem uma base e quer ganhar fluência. Na nossa primeira conversa, eu entendo onde você está e a gente começa do ponto certo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false">
+            As aulas são 100% online?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, 100% online. Você estuda de onde estiver, sem deslocamento. Tudo que você precisa é de uma conexão boa e vontade de aprender.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false">
+            Em quanto tempo vou conseguir me comunicar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Varia de pessoa para pessoa, mas a maioria dos alunos já sente uma diferença real nos primeiros 2 a 3 meses. O segredo não é velocidade — é consistência. E eu estou aqui em cada etapa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false">
+            Como funcionam os horários?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Tenho algumas janelas fixas disponíveis, mas trabalho com flexibilidade. A gente combina um horário que funcione de verdade pra sua rotina — sem você ter que se virar ao contrário pra encaixar uma aula.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false">
+            Como funciona a primeira conversa?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>É um papo de cerca de 30 minutos onde eu ouço sua história com o inglês, entendo seus objetivos e te mostro como posso ajudar. Sem pressão, sem pitch de venda. Só uma conversa honesta pra ver se faz sentido a gente trabalhar junto.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-6">
+          <button class="faq-question" aria-expanded="false">
+            Qual a diferença entre aula individual e em grupo?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Na aula individual, todo o foco é em você — seu ritmo, suas dificuldades, seus objetivos. Nas turmas em grupo, a dinâmica é mais parecida com conversas reais entre pessoas, o que também acelera muito o aprendizado. Os dois funcionam — a escolha depende do seu perfil.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-7">
+          <button class="faq-question" aria-expanded="false">
+            Tem material didático?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>O material é montado sob medida pra você. Nada de apostila genérica — usamos o que faz sentido para o seu objetivo: séries, notícias, músicas, situações do seu trabalho. O inglês que você vai usar de verdade.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-8">
+          <button class="faq-question" aria-expanded="false">
+            O inglês da Duca serve para quem precisa do idioma no trabalho?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, e muito. Vários alunos chegam aqui com esse objetivo — reuniões em inglês, entrevistas, apresentações. A gente foca exatamente nas situações que você vai enfrentar, não em gramática que não serve pra nada no dia a dia.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== CONTATO / CTA FINAL ===== -->
+  <section class="contato" id="contato">
+    <div class="contato-bg-blobs">
+      <div class="blob blob-c1"></div>
+      <div class="blob blob-c2"></div>
+    </div>
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-content">
+          <div class="section-badge section-badge-white">Bora conversar?</div>
+          <h2 class="section-title contato-title">Me conta o que<br /><span class="hand-text">você precisa.</span></h2>
+          <p class="contato-subtitle">Antes de qualquer plano ou compromisso, quero entender onde você está, o que te trava e o que você quer alcançar. Só depois a gente encontra o melhor caminho juntos.</p>
+          <div class="contato-info">
+            <a href="https://wa.me/5516994023852" class="contato-link-min" id="whatsapp-link" target="_blank" rel="noopener">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <div class="link-info">
+                <span class="link-label">WhatsApp</span>
+                <span class="link-value">+55 (16) 99402-3852</span>
+              </div>
+            </a>
+            <a href="mailto:inglesduca@gmail.com" class="contato-link-min" id="email-link">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              <div class="link-info">
+                <span class="link-label">E-mail</span>
+                <span class="link-value">inglesduca@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/inglesduca" class="contato-link-min" id="instagram-link" target="_blank" rel="noopener">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <div class="link-info">
+                <span class="link-label">Instagram</span>
+                <span class="link-value">@inglesduca</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contato-form-wrap">
+          <!--
+            FORMSUBMIT: envia os dados direto para inglesduca@gmail.com.
+            Na primeira submissão, você receberá um e-mail do FormSubmit pedindo
+            para confirmar o endereço — clique no link e pronto, está ativo!
+          -->
+          <form
+            class="contato-form"
+            id="contato-form"
+            action="https://formsubmit.co/inglesduca@gmail.com"
+            method="POST"
+          >
+            <!-- Campos ocultos de configuração -->
+            <input type="hidden" name="_subject" value="Novo contato pelo site da Duca!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_honey" style="display:none" />
+
+            <h3>Me manda uma mensagem</h3>
+            <div class="form-group">
+              <label for="nome">Seu nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Como posso te chamar?" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="nivel">Seu nível de inglês</label>
+              <select id="nivel" name="nivel">
+                <option value="">Selecione...</option>
+                <option value="zero">Nunca estudei</option>
+                <option value="basico">Básico</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="form-submit">
+              Manda sua mensagem
+            </button>
+            <p class="form-note">O Teacher Du responde pessoalmente em até 2 horas</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <span class="logo-duca">duca</span>
+            <span class="logo-tagline">inglês de boa</span>
+          </a>
+          <p class="footer-tagline">Inglês sem enrolação. Para a vida real.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/inglesduca" id="footer-instagram" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/5516994023852" id="footer-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:inglesduca@gmail.com" id="footer-email" aria-label="E-mail" class="social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre a Duca</a></li>
+            <li><a href="#metodo">Nosso Método</a></li>
+            <li><a href="#planos">Modalidades</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Modalidades</h4>
+          <ul>
+            <li><a href="#planos">Aula Individual</a></li>
+            <li><a href="#planos">Aula em Grupo</a></li>
+            <li><a href="#contato">Primeira conversa</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Receba dicas de inglês</h4>
+          <p>Toda semana no seu e-mail, de graça.</p>
+          <!--
+            BREVO: Cole aqui a URL que aparece no código de incorporação do seu formulário Brevo.
+            Caminho: Brevo → Contatos → Formulários → Criar formulário → Compartilhar → código HTML → copie o action="..."
+            Exemplo: https://sibforms.com/serve/MUIFXXXXXXXXXXXXXXXX
+          -->
+          <form
+            class="newsletter-form"
+            id="newsletter-form"
+            action="COLE_AQUI_A_URL_DO_BREVO"
+            method="POST"
+            target="_blank"
+          >
+            <input type="email" id="newsletter-email" name="EMAIL" placeholder="seu@email.com" required />
+            <button type="submit" id="newsletter-btn">Assinar</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Duca – Inglês de Boa. Todos os direitos reservados.</p>
+        <p><a href="https://www.inglesduca.com.br">www.inglesduca.com.br</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
