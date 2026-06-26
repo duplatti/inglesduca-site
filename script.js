@@ -206,9 +206,9 @@ if (heroStats) {
       if (entry.isIntersecting && !statsAnimated) {
         statsAnimated = true;
         const nums = [
-          { el: heroStats.querySelectorAll('.stat-num')[0], val: 500, suffix: '+' },
-          { el: heroStats.querySelectorAll('.stat-num')[1], val: 98,  suffix: '%' },
-          { el: heroStats.querySelectorAll('.stat-num')[2], val: 7,   suffix: '+' },
+          { el: heroStats.querySelectorAll('.stat-num')[0], val: 80,  suffix: '+' },
+          { el: heroStats.querySelectorAll('.stat-num')[1], val: 4,   suffix: '+' },
+          { el: heroStats.querySelectorAll('.stat-num')[2], val: 100, suffix: '%' },
         ];
         nums.forEach(({ el, val, suffix }) => {
           if (el) {
