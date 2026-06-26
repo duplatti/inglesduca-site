@@ -14,6 +14,8 @@
   <!-- Plus Jakarta Sans ≈ Neue Einstellung | Caveat ≈ Bryndan Write -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Brevo newsletter validation -->
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
 </head>
 <body>
 
@@ -610,19 +612,17 @@
         <div class="footer-newsletter">
           <h4>Receba dicas de inglês</h4>
           <p>Toda semana no seu e-mail, de graça.</p>
-          <!--
-            BREVO: Cole aqui a URL que aparece no código de incorporação do seu formulário Brevo.
-            Caminho: Brevo → Contatos → Formulários → Criar formulário → Compartilhar → código HTML → copie o action="..."
-            Exemplo: https://sibforms.com/serve/MUIFXXXXXXXXXXXXXXXX
-          -->
           <form
             class="newsletter-form"
-            id="newsletter-form"
-            action="COLE_AQUI_A_URL_DO_BREVO"
+            id="sib-form"
+            action="https://745e5512.sibforms.com/serve/MUIFAMAsHfJ8XuesW4XE59rxcM1IfWvY0cEANUWc7L8YjB80r101URgd2lW6_6OIXqU43QEj1qdHesT0EDFWtV3LHqPOAK-z7O458nbKSKcfFBVgjZF9tlFOe1lgwNnMcEfvYJy598ez_m-kGq30elMxuCNW0mWwqNmHBGleguZptlelrFciUvCSyA54wuAmLgF1ocL0ZcZMbTbpSA=="
             method="POST"
-            target="_blank"
+            data-type="subscription"
           >
-            <input type="email" id="newsletter-email" name="EMAIL" placeholder="seu@email.com" required />
+            <!-- Campos obrigatórios pelo Brevo -->
+            <input type="text" name="email_address_check" value="" class="input--hidden" style="display:none" />
+            <input type="hidden" name="locale" value="pt" />
+            <input type="email" id="newsletter-email" name="EMAIL" placeholder="seu@email.com" required autocomplete="off" />
             <button type="submit" id="newsletter-btn">Assinar</button>
           </form>
         </div>
@@ -637,6 +637,16 @@
   <!-- Toast notification -->
   <div class="toast" id="toast" aria-live="polite"></div>
 
+  <!-- Brevo newsletter script -->
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Escolha um código de país';
+    window.LOCALE = 'pt';
+    window.EMAIL_INVALID_MESSAGE = 'E-mail inválido. Verifique o formato e tente novamente.';
+    window.REQUIRED_ERROR_MESSAGE = 'Este campo é obrigatório.';
+    window.GENERIC_INVALID_MESSAGE = 'Informação inválida. Verifique e tente novamente.';
+    var AUTOHIDE = Boolean(0);
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

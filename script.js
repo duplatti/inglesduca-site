@@ -115,9 +115,8 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 const contactForm = document.getElementById('contato-form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const nome    = document.getElementById('nome');
-    const email   = document.getElementById('email');
+    const nome  = document.getElementById('nome');
+    const email = document.getElementById('email');
     let valid = true;
 
     // Validação básica
@@ -136,43 +135,25 @@ if (contactForm) {
     }
 
     if (!valid) {
-      showToast('⚠️ Por favor, preencha os campos obrigatórios.');
+      // Bloqueia o envio só se inválido
+      e.preventDefault();
+      showToast('Preencha os campos obrigatórios antes de enviar.');
       return;
     }
 
-    // Simulação de envio (aqui você conectaria a um backend ou FormSubmit)
+    // Se válido: deixa o form submeter normalmente para o FormSubmit
     const submitBtn = document.getElementById('form-submit');
-    submitBtn.textContent = 'Enviando... ⏳';
+    submitBtn.textContent = 'Enviando...';
     submitBtn.disabled = true;
-
-    setTimeout(() => {
-      showToast('🎉 Mensagem enviada! Em breve entraremos em contato.');
-      contactForm.reset();
-      submitBtn.textContent = 'Quero minha aula gratuita! 🚀';
-      submitBtn.disabled = false;
-    }, 1500);
   });
 
   // Remover erro ao digitar
-  contactForm.querySelectorAll('input').forEach(input => {
+  contactForm.querySelectorAll('input, select').forEach(input => {
     input.addEventListener('input', () => input.classList.remove('error'));
   });
 }
 
-/* ===== NEWSLETTER ===== */
-const newsletterForm = document.getElementById('newsletter-form');
-if (newsletterForm) {
-  newsletterForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const emailInput = document.getElementById('newsletter-email');
-    if (!emailInput.value || !emailInput.value.includes('@')) {
-      showToast('⚠️ Digite um e-mail válido.');
-      return;
-    }
-    showToast('✅ Inscrito! Fique de olho no seu e-mail.');
-    newsletterForm.reset();
-  });
-}
+/* ===== NEWSLETTER (Brevo — tratada nativamente) ===== */
 
 /* ===== TOAST ===== */
 function showToast(message, duration = 4000) {
